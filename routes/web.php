@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+//Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -29,5 +29,9 @@ Route::get('/ajaxdatatable',[
     'as' => 'ajaxdatatable'
 ]);
 
+
+Route::get('/user/{id}','UsersController@destroy');
+
+Route::post('user/store', 'UsersController@store')->name('user.store');
 
 Route::get('/api/users', 'APIController@getUsers')->name('api.users');

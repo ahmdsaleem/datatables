@@ -43,8 +43,11 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        dd($request->username);
+
     }
+
 
     /**
      * Display the specified resource.
@@ -88,6 +91,6 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+
     }
 }
